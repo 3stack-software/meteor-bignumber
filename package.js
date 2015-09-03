@@ -1,12 +1,19 @@
 Package.describe({
   name: '3stack:bignumber',
-  version: "2.0.0",
+  version: "2.0.7",
   summary: "https://github.com/MikeMcl/bignumber.js/",
   git: 'https://github.com/3stack-software/meteor-bignumber',
   documentation: 'README.md'
 });
 
+Npm.depends({
+  "bignumber.js": "2.0.7"
+});
+
 Package.onUse(function (api) {
   api.export('BigNumber');
-  api.addFiles('bignumber.js');
+  api.use('cosmos:browserify@0.4.0');
+  api.addFiles([
+    'bignumber.browserify.js'
+  ]);
 });
