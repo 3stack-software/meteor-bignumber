@@ -1,13 +1,13 @@
 Package.describe({
   name: '3stack:bignumber',
-  version: "2.0.7",
+  version: "4.0.2",
   summary: "https://github.com/MikeMcl/bignumber.js/",
   git: 'https://github.com/3stack-software/meteor-bignumber',
   documentation: 'README.md'
 });
 
 Npm.depends({
-  "bignumber.js": "2.0.7"
+  "bignumber.js": "4.0.2"
 });
 
 Package.onUse(function (api) {
